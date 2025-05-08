@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+    {% extends "template.html" %}
+
+    {% block pageBody %} 
+    
+
+    <div class="fade-in pageIntro">
+        <h1>Threats</h1>
+        <p>Use this page to learn further over the various critical threats in healthcare, such as the risks and measures, complete with case studies.</p>
+    </div>
+    
+    <section id="threats">
+
+        <!-- FIRST THREAT -->
+        <div class="threat">
+            <div class="threatBar" onclick="toggleThreat('ransomInfo')">
+                <div id="ransomInfoTriangle" class="barTriangle"></div>
+                <h2>RANSOMWARE</h2>
+            </div>
+            <div id="ransomInfo" class="threatInfo">
+                
+                <div class="description">
+                    <p>Staff within healthcare organizations in leadership positions are at much higher risk of ransomware attacks and are a more attractive target to cybercriminals. Executive leaders often have access to privileged information which is highly valuable to attackers.</p>
+                </div>
+                <div class="response-impact">
+                    <div class="impact">
+                        <h2>IMPACT</h2>
+                        <p>The attack encrypted critical systems, rendering the hospital's computer network inaccessible. This included patient records, x-rays, CT scans, and other medical test results.</p>
+                    </div>
+                    <div class="response">
+                        <h2>RESPONSE/MEASURES</h2>
+                        <p>An internal emergency was declared. The hospital took its systems offline, and some departments were instructed not to turn on their computers. Staff reverted to manual, pen-and-paper methods for patient admissions and record-keeping.</p>
+                    </div>
+                </div>
+                <div class="caseStudy-button">
+                    <div class="case-study">
+                        <h2>CASE STUDY</h2>
+                        <h3>Hollywood Presbyterian Medical Center</h3>
+                        <p>The hospital was targeted by a ransomware attack using the "Locky" malware. It’s believed the attack happened because an employee accidentally clicked on an email that was a phishing scam.</p>
+                    </div>
+                    <a href="{{ url_for('test') }}" class="styleButton buttonMarginTop">TEST YOUR KNOWLEDGE</a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- SECOND THREAT -->
+        <div class="threat">
+            <div class="threatBar" onclick="toggleThreat('breachInfo')">
+                <div id="breachInfoTriangle" class="barTriangle"></div>
+                <h2>DATA BREACHES</h2>
+            </div>
+            <div id="breachInfo" class="threatInfo">
+
+                <div class="description">
+                    <p>In most modern healthcare organisations, health record systems have changed to from paper-based systems to electronic. Healthcare organisations collect and store sensitive data on servers to but this has lead to privacy being increasingly compromised and affected by the use of digital devices. As a result of this, big databases can be left exposed due to software vulnerabilities and security breaches; meaning sensitive data, including patient data is at risk of being leaked.<br><br>
+                        
+                    Health information is also considered to be extremely attractive for cyber criminals and the black market value of health information is at least 10 to 20 times more than the value of credit card data.<br><br>
+                        
+                    From 2005 - 2019, nearly 43.38% of all available health data was compromised from 2005 to 2019, the highest among all sectors.<br><br>
+                        
+                    E-health data is highly susceptible, as it is targeted most frequently by attackers.<br><br>
+                        
+                    A long-term analysis of data breaches showed that healthcare records were often exposed by both internal and external attacks, including hacking, theft,  false disclosure, and the improper disposal of sensitive data.<br><br>
+                        
+                    Network servers are the main locations from where confidential health data is breached.<br><br>
+                        
+                    A major cause of cyber attacks in the healthcare industry as healthcare organisations lacking usable-security measures due to an absence of accountability and improper training of employees and clients.
+</p>
+                </div>
+                <div class="response-impact">
+                    <div class="impact">
+                        <h2>IMPACT</h2>
+                        <p>Patients' medical records, financial info and other sensitive data from both patients and the organisation, will be in the hands of the attackers, which can have serious privacy and financial impacts on both patients and organisations.</p>
+                    </div>
+                    <div class="response">
+                        <h2>RESPONSE/MEASURES</h2>
+                        <p>Ensure that only authorised personnel have access to sensitive data by using strong authentication methods like multi-factor authentication to verify user identities.<br><br>
+
+                            Conduct frequent security checks in order to assess vulnerabilities and identify potential weaknesses.<br><br>
+
+                            Only collect and store absolutely necessary patient data and delete and anonymise data that is no longer needed.<br><br>
+
+                            Develop a comprehensive incident response plan to address breaches promptly in the event they were to happen in order to quickly respond and minimise negative consequences.<br><br>
+
+                            Secure physical access to servers, data centres, and other facilities that store sensitive data.</p>
+                    </div>
+                </div>
+                <div class="caseStudy-button">
+                    <div class="case-study">
+                        <h2>CASE STUDY</h2>
+                        <h3>Premera Blue Cross Data Breach (2014)</h3>
+                        <p>Premera Blue Cross experienced a significant data breach in 2014. The breach was discovered in January 2015 but had begun in May 2014. Hackers infiltrated the company's systems and remained undetected for several months, gaining access to a vast amount of sensitive information.<br><br>
+                        
+                            The breach affected approximately 11 million people. The data compromised included names, addresses, birth dates, email addresses, telephone numbers, Social Security numbers, member identification numbers, bank account information, and claims information, including clinical data.<br><br>
+
+                            Once they discovered the breach, Premera Blue Cross began working with Mandiant, a cybersecurity firm, to investigate the breach and secure its systems. The company notified affected individuals and offered two years of free credit monitoring and identity theft protection services.<br><br>
+
+                            Premera had to undertake extensive measures to secure its network; including enhancing its cybersecurity infrastructure, implementing additional monitoring tools, and increasing employee training on cybersecurity practices.<br><br>
+
+                            The breach drew significant public and professional attention to the importance of cybersecurity in healthcare. There was considerable scrutiny from regulatory bodies, and Premera faced several lawsuits and potential penalties for failing to adequately protect sensitive patient information.</p>
+                    </div>
+                    <a href="{{ url_for('test') }}" class="styleButton buttonMarginTop">TEST YOUR KNOWLEDGE</a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- THIRD THREAT  -->
+        <div class="threat">
+            <div class="threatBar" onclick="toggleThreat('phishingInfo')">
+                <div id="phishingInfoTriangle" class="barTriangle"></div>
+                <h2>PHISHING</h2>
+            </div>
+            <div id="phishingInfo" class="threatInfo">
+                
+                <div class="description">
+                    <p>Phishing is a cyberattack method attempting to gain user-names, passwords or medical data. This is being done with spoofing techniques such as emails or messaging by encouraging recipients to click links to websites running malicious code or to download or install malware. These techniques are employed to trick a user into revealing confidential information. The healthcare organisations are especially vulnerable for phishing attacks since personal patient data is of high economic value. According to a study by Z-cert that estimates future cyber attacks estimates that the number of ransomware attacks increase due to the constantly new phishing attacks that evolve.</p>
+                </div>
+                <div class="response-impact">
+                    <div class="impact">
+                        <h2>IMPACT</h2>
+                        <p>Phishing within healthcare has several risks such as theft of social security numbers, addresses and phone numbers can be stolen and used for identity theft. In addition to that are hackers particularly interested in credentials: login information for various accounts, including banking, email and social media, can be compromised and misused. If hackers have access to unauthorised accounts, stolen online accounts can be used to commit fraud or other crimes in the victim's name.<br><br>A major disadvantage for large businesses is phishing can cause reputational damage. Often when organisations that fall victim to phishing attacks may suffer from a loss of trust among customers, clients and partners. 
+</p>
+                    </div>
+                    <div class="response">
+                        <h2>RESPONSE/MEASURES</h2>
+                        <p>The primary preventive measure of a phishing attack is simply by recognising that users are dealing with a phishing message. These are some ways to recognise them:<br><br>
+                            
+                            <span class="boldText">Message Headings:</span> Companies and institutions you are a customer of or do business with will at least use your last name in an email or know whether you are a man or a woman. If you are addressed with very general terms like 'Dear Sir/Madam' or 'Dear Customer,' be cautious.<br><br>
+
+                            <span class="boldText">Requesting Personal Information:</span> Many phishing emails ask you to 'verify,' 'update,' or 'complete' your personal information, often providing a link to click. Never do this impulsively. Your bank, insurance company, and government agencies will never request personal information in this manner. Always call the company or institution first to verify if they actually sent the email. Never use the contact details provided in the email; instead, find them independently.<br><br>
+
+                            <span class="boldText">Language and Design:</span> The current generation of phishing emails no longer contains many language and spelling errors. The logos and photos used are also becoming increasingly professional. Carefully read and examine the email to see if you can spot any irregularities. You can also compare it with a previous email from the company or institution for reference.<br><br>
+
+                            <span class="boldText">Urgency or Final warnings:</span> Many phishing emails try to pressure you by using final warnings or urgent messages. An example of such a message might be, "Your hosting package is expiring; if you do not pay x today, your website will be blocked." Do not respond to these emails. Instead, if in doubt, contact the hosting company by phone.<br><br>
+
+                            <span class="boldText">Link shorteners:</span> Long links are often shortened using T.co, bit.ly, and Goo.gl. While convenient, it is crucial for you as the recipient to be cautious, as it is difficult to determine where these links actually lead.<br><br>
+                            
+                            You can read more on how to recognise them <a href="https://www.digitaltrustcenter.nl/informatie-advies/phishing/hoe-herken-ik-een-phishing-e-mail" target=”_blank”>here</a>.</p>
+                    </div>
+                </div>
+                <div class="caseStudy-button">
+                    <div class="case-study">
+                        <h2>CASE STUDY</h2>
+                        <h3>Magellan health</h3>
+                        <p>A ransomware attack on Magellan health resulted in a data breach lawsuit for 1.43 million dollars. The base of this attack was a phishing attack that resulted in encryption of files and some employee information. The attacker has gained access to its systems following a spear phishing email sent where he fooled the employee by impersonating a client of magellan health.  The phishing attack impacted 273 000 individuals.<br><br>
+                            
+                            The response of the magellan health is a law enforcement and investigation of the breach. As well as direct steps towards a more cyber secure environment in the future.<br><br>
+                            
+                            The recent breach involved stolen data related to current employees of Magellan Health. This included sensitive information such as names, addresses, employee ID numbers, and W-2 and 1099 information, which encompassed taxpayer IDs and Social Security numbers. Additionally, a limited number of usernames and passwords were compromised in the attack. While there have been no reported attempts to utilize this data, Magellan Health advises affected individuals to remain vigilant for potential identity theft and misuse.<br><br>
+                            
+                            Furthermore, the breach also impacted other individuals, potentially exposing a range of information such as treatment details, health insurance account information, member IDs, other health-related information, email addresses, phone numbers, physical addresses, and in some cases, Social Security numbers. However, data theft for this group has not been confirmed.
+</p>
+                    </div>
+                    <a href="{{ url_for('test') }}" class="styleButton buttonMarginTop">TEST YOUR KNOWLEDGE</a>
+                </div>
+
+            </div>
+        </div>
+        
+    </section>
+
+    <script>
+
+        function toggleThreat(infoTag){
+            const infoSection = document.getElementById(infoTag);
+            const barTriangle = document.getElementById(`${infoTag}Triangle`);
+
+
+            if (infoSection.style.maxHeight) {
+                infoSection.style.maxHeight = null;
+            } else {
+                infoSection.style.maxHeight = infoSection.scrollHeight + "px";
+            } 
+
+            barTriangle.classList.toggle('triangleRotate');
+        }
+
+    </script>
+    
+    {% endblock %}
+</body>
+</html>

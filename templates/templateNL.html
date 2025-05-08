@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sigra Cybersecurity</title>
+    <link href="{{ url_for('static',filename='css/styles.css') }}" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="hamburgerMenu" style="display:none;">
+      <div id="hamLinks">
+        <a href="{{ url_for('index', lang='nl') }}"><p>HOME</p></a>
+        <a href="{{ url_for('learn', lang='nl') }}"><p>LEEREN</p></a>
+        <a href="{{ url_for('test', lang='nl') }}"><p>TESTEN</p></a>
+        <a href="{{ url_for('checklist', lang='nl') }}"><p>CHECKLIST</p></a>
+        <a href="{{ url_for('contact', lang='nl') }}"><p>CONTACT</p></a>
+        <img onclick="switchLanguage('eng')" src="{{ url_for('static',filename='media/ukicon.png') }}" id="languageSwitch" style="border:2px solid #242424;">
+      </div>
+    </div>
+    
+    <header>
+      <div class="hamButton" onclick="hamburgerState(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+      
+      <div id="pinkLine"></div>
+      
+      <div id="logo">
+        <img src="{{ url_for('static',filename='media/logo.png') }}" alt="Site logo">
+      </div>
+      <nav>
+        <img onclick="switchLanguage('eng')" src="{{ url_for('static',filename='media/ukicon.png') }}" id="languageSwitch">
+        <a href="{{ url_for('index', lang='nl') }}"><p>HOME</p></a>
+        <a href="{{ url_for('learn', lang='nl') }}"><p>LEEREN</p></a>
+        <a href="{{ url_for('test', lang='nl') }}"><p>TESTEN</p></a>
+        <a href="{{ url_for('checklist', lang='nl') }}"><p>CHECKLIST</p></a>
+        <a href="{{ url_for('contact', lang='nl') }}"><p>CONTACT</p></a>
+      </nav>
+    </header>
+    {% block pageBody %} {% endblock %}
+    <footer>
+      <h1>CYBER ANGELS - SIGRA</h1>
+      <h1>2024</h1>
+    </footer>
+
+    <script>
+      function hamburgerState(x) {
+        x.classList.toggle("change");
+        x.classList.toggle("hamButtonFix");
+        document.getElementById("hamburgerMenu").style.display = document.getElementById("hamburgerMenu").style.display === 'none' ? 'inline' : 'none';
+        document.getElementById("hamburgerMenu").classList.toggle("slide-right");
+      }
+
+      function switchLanguage(lang){
+        let url = window.location.href;
+        url = url.substring(0, url.indexOf("?"));
+        window.location.href = `${url}?lang=${lang}`
+      }
+    </script>
+  </body>
+</html>

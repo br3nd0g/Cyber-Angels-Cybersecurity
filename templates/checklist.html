@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    {% extends "template.html" %}
+
+    {% block pageBody %} 
+
+    <div class="fade-in pageIntro" style="margin-bottom: 50px;">
+      <h1>Checklist</h1>
+      <p>Use this page to keep track of cybersecurity measures and practices undertaken, to follow your progress. You are able to save your checklist to a file, and load it again to keep track between sessions.</p>
+    </div>
+
+    <form id="checklistForm" action="javascript:;" onsubmit="saveChecked(this)">
+
+      <div id="formColumns">
+
+        <div id="checklistCol1">
+
+          <div class="checklistItem">
+            <input type="checkbox" id="checklist1" name="checklist1">
+            <label for="checklist1">I run a reputable antivirus product</label>
+          </div>
+    
+          <div class="checklistItem">
+            <input type="checkbox" id="checklist2" name="checklist2">
+            <label for="checklist2">My software, operating system and browser are up to date</label>
+          </div>
+
+          <div class="checklistItem">
+            <input type="checkbox" id="checklist3" name="checklist3">
+            <label for="checklist3">I don’t reuse the same or similar passwords</label>
+          </div>
+    
+          <div class="checklistItem">
+            <input type="checkbox" id="checklist4" name="checklist4">
+            <label for="checklist4">I make sure I don’t click on links or open attachments in unsolicited emails or text messages</label>
+          </div>
+
+          <div class="checklistItem">
+            <input type="checkbox" id="checklist10" name="checklist10">
+            <label for="checklist10">I avoid using public Wi-Fi</label>
+          </div>
+
+        </div>
+
+        <div id="checklistCol2">
+
+          <div class="checklistItem">
+            <input type="checkbox" id="checklist5" name="checklist5">
+            <label for="checklist5">I limit how much information I share on social media</label>
+          </div>
+    
+          <div class="checklistItem">
+            <input type="checkbox" id="checklist6" name="checklist6">
+            <label for="checklist6">I am cautious about sharing Personally Identifiable Information</label>
+          </div>
+
+          <div class="checklistItem">
+            <input type="checkbox" id="checklist7" name="checklist7">
+            <label for="checklist7">I ensure system users can only access information they need for their role </label>
+          </div>
+
+          <div class="checklistItem">
+            <input type="checkbox" id="checklist8" name="checklist8">
+            <label for="checklist8">I regularly back up the information on my devices</label>
+          </div>
+
+          <div class="checklistItem">
+            <input type="checkbox" id="checklist9" name="checklist9">
+            <label for="checklist9">I understand the data my business holds is important and it is my responsibility to protect it</label>
+          </div>
+
+        </div>
+      </div>
+
+      <div id="checklistSaveLoad">
+        <button id="checklistSave" type="submit">Save</button> 
+        <button id="checklistLoad" type="button" onclick="loadFile()">Load</button> 
+      </div>
+
+    </form>
+
+    <script src="{{ url_for('static',filename='js/checklist.js') }}" defer></script>
+
+    {% endblock %}
+  </body>
+</html>

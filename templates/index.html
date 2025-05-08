@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    {% extends "template.html" %}
+
+    {% block pageBody %} 
+
+    <div id="homeContent" class="fade-in">
+      <div id="goal">
+        <h2>OUR GOAL</h2>
+        <p>This website is designed for upper management of healthcare organisations to learn, test and track cybersecurity knowledge. This is important due to the upcoming NIS2 law. Use the learn page to read info over risks, measures, and real life case studies. You can also test your knowledge on the tests page, and track your measures on the checklist page.</p>
+      </div>
+      <div id="why">
+        <h2>WHY CYBERSECURITY</h2>
+        <p>With the introduction of the NIS2 law organizations in critical sectors will have more obligations. These obligations are set out in the European Network and Information Security directive (NIS2). The NIS2 directive is meant to help achieve a higher level of cybersecurity for network and information systems. The directive aims to ensure that EU countries better protect themselves against threats that could disrupt society or the economy.</p>
+        <a href="{{ url_for('nis2') }}" class="styleButton buttonMarginTop">YOUR RIGHTS & RESPONSIBILITES</a>
+      </div>
+    </div>
+    
+    {% endblock %}
+  </body>
+</html>

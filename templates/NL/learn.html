@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+    {% extends "templateNL.html" %}
+
+    {% block pageBody %} 
+    
+
+    <div class="fade-in pageIntro">
+        <h1>Bedreigingen</h1>
+        <p>Gebruik deze pagina om meer te leren over de verschillende kritische bedreigingen in de gezondheidszorg, zoals de risico's en maatregelen, compleet met casestudies.</p>
+    </div>
+    
+    <section id="threats">
+
+        <!-- FIRST THREAT -->
+                <div class="threat">
+                    <div class="threatBar" onclick="toggleThreat('ransomInfo')">
+                        <div id="ransomInfoTriangle" class="barTriangle"></div>
+                        <h2>RANSOMWARE</h2>
+                    </div>
+                    <div id="ransomInfo" class="threatInfo">
+
+                        <div class="description">
+                            <p>Medewerkers in leidinggevende posities binnen organisaties in de gezondheidszorg lopen een veel hoger risico op ransomware-aanvallen en zijn een aantrekkelijker doelwit voor cybercriminelen. Leidinggevenden hebben vaak toegang tot bevoorrechte informatie die zeer waardevol is voor aanvallers.</p>
+                        </div>
+                        <div class="response-impact">
+                            <div class="impact">
+                                <h2>IMPACT</h2>
+                                <p>De aanval versleutelde kritieke systemen, waardoor het computernetwerk van het ziekenhuis ontoegankelijk werd. Hieronder vielen patiëntendossiers, röntgenfoto's, CT-scans en andere medische testresultaten.</p>
+                            </div>
+                            <div class="response">
+                                <h2>REACTIE/MAATREGELEN</h2>
+                                <p>Er werd een interne noodsituatie uitgeroepen. Het ziekenhuis haalde zijn systemen offline en sommige afdelingen kregen de opdracht om hun computers niet aan te zetten. Het personeel keerde terug naar handmatige, pen-en-papier methoden voor het opnemen van patiënten en het bijhouden van gegevens.</p>
+                            </div>
+                        </div>
+                        <div class="caseStudy-button">
+                            <div class="case-study">
+                                <h2>CASESTUDIE</h2>
+                                <h3>Hollywood Presbyterian Medical Center</h3>
+                                <p>Het ziekenhuis was het doelwit van een ransomware-aanval met de “Locky”-malware. Men denkt dat de aanval plaatsvond omdat een medewerker per ongeluk op een e-mail klikte die een phishing-zwendel was.</p>
+                            </div>
+                            <a href="{{ url_for('test') }}" class="styleButton buttonMarginTop">TEST JE KENNIS</a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- SECOND THREAT -->
+                <div class="threat">
+                    <div class="threatBar" onclick="toggleThreat('breachInfo')">
+                        <div id="breachInfoTriangle" class="barTriangle"></div>
+                        <h2>DATA BREACHES</h2>
+                    </div>
+                    <div id="breachInfo" class="threatInfo">
+
+                        <div class="description">
+                            <p>In de meeste moderne organisaties in de gezondheidszorg zijn de systemen voor medische dossiers veranderd van papieren systemen naar elektronische systemen. Organisaties in de gezondheidszorg verzamelen en bewaren gevoelige gegevens op servers, maar dit heeft ertoe geleid dat de privacy steeds meer in het gedrang komt en wordt aangetast door het gebruik van digitale apparaten. Als gevolg hiervan kunnen grote databases blootgesteld worden aan kwetsbaarheden in software en beveiligingslekken, waardoor gevoelige gegevens, waaronder patiëntgegevens, het risico lopen om uit te lekken.<br><br>
+
+                                Gezondheidsinformatie wordt ook beschouwd als zeer aantrekkelijk voor cybercriminelen en de zwarte marktwaarde van gezondheidsinformatie is minstens 10 tot 20 keer hoger dan de waarde van creditcardgegevens.<br><br>
+
+                                Van 2005 tot 2019 werd bijna 43,38% van alle beschikbare gezondheidsgegevens gecompromitteerd, het hoogste percentage van alle sectoren.<br><br>
+
+                                E-gezondheidsgegevens zijn zeer kwetsbaar, omdat ze het vaakst het doelwit zijn van aanvallers.<br><br>
+
+                                Een langetermijnanalyse van datalekken toonde aan dat dossiers in de gezondheidszorg vaak werden blootgelegd door zowel interne als externe aanvallen, waaronder hacking, diefstal, valse openbaarmaking en onjuiste verwijdering van gevoelige gegevens.<br><br>
+
+                                Netwerkservers zijn de belangrijkste locaties van waaruit vertrouwelijke gezondheidsgegevens worden geschonden.<br><br>
+
+                                Een belangrijke oorzaak van cyberaanvallen in de gezondheidszorg is het ontbreken van bruikbare beveiligingsmaatregelen bij zorgorganisaties door een gebrek aan verantwoordingsplicht en onjuiste training van medewerkers en cliënten.
+        </p>
+                        </div>
+                        <div class="response-impact">
+                            <div class="impact">
+                                <h2>IMPACT</h2>
+                                <p>Medische dossiers van patiënten, financiële informatie en andere gevoelige gegevens van zowel patiënten als de organisatie komen in handen van aanvallers, wat ernstige gevolgen kan hebben voor de privacy en financiën van zowel patiënten als organisaties.</p>
+                            </div>
+                            <div class="response">
+                                <h2>REACTIE/MAATREGELEN</h2>
+                                <p>Zorg ervoor dat alleen bevoegd personeel toegang heeft tot gevoelige gegevens door gebruik te maken van sterke verificatiemethoden zoals multifactorauthenticatie om de identiteit van gebruikers te verifiëren.<br><br>
+
+                                    Voer regelmatig beveiligingscontroles uit om kwetsbaarheden te beoordelen en potentiële zwakke punten te identificeren.<br><br>
+
+                                    Alleen absoluut noodzakelijke patiëntgegevens verzamelen en opslaan en gegevens die niet langer nodig zijn verwijderen en anonimiseren.<br><br>
+
+                                    Een uitgebreid incidentenbestrijdingsplan ontwikkelen om inbreuken onmiddellijk aan te pakken als ze zich voordoen, om snel te kunnen reageren en de negatieve gevolgen tot een minimum te beperken.<br><br>
+
+                                Beveilig de fysieke toegang tot servers, datacenters en andere faciliteiten waar gevoelige gegevens worden opgeslagen.</p>
+                            </div>
+                        </div>
+                        <div class="caseStudy-button">
+                            <div class="case-study">
+                                <h2>CASESTUDIE</h2>
+                                <h3>Premera Blue Cross Data Breach (2014)</h3>
+                                <p>Premera Blue Cross kreeg in 2014 te maken met een aanzienlijk datalek. De inbreuk werd ontdekt in januari 2015, maar was al begonnen in mei 2014. Hackers infiltreerden in de systemen van het bedrijf en bleven enkele maanden onopgemerkt, waardoor ze toegang kregen tot een enorme hoeveelheid gevoelige informatie.<br><br>
+
+                                    De inbreuk betrof ongeveer 11 miljoen mensen. De gecompromitteerde gegevens omvatten namen, adressen, geboortedata, e-mailadressen, telefoonnummers, burgerservicenummers, lidmaatschapsidentificatienummers, bankrekeninginformatie en claiminformatie, waaronder klinische gegevens.<br><br>
+
+                                    Toen ze de inbreuk ontdekten, begon Premera Blue Cross samen te werken met Mandiant, een cyberbeveiligingsbedrijf, om de inbreuk te onderzoeken en de systemen te beveiligen. Het bedrijf bracht de getroffen personen op de hoogte en bood twee jaar gratis kredietbewaking en bescherming tegen identiteitsdiefstal aan.<br><br>
+
+                                    Premera moest uitgebreide maatregelen nemen om zijn netwerk te beveiligen, waaronder het verbeteren van de cyberbeveiligingsinfrastructuur, het implementeren van extra monitoringtools en het uitbreiden van de training van werknemers over cyberbeveiligingspraktijken.<br><br>
+
+                                De inbraak trok veel publieke en professionele aandacht voor het belang van cyberbeveiliging in de gezondheidszorg. Regelgevende instanties hielden de zaak nauwlettend in de gaten en Premera kreeg te maken met verschillende rechtszaken en mogelijke boetes voor het niet adequaat beschermen van gevoelige patiëntgegevens.</p>
+                            </div>
+                            <a href="{{ url_for('test') }}" class="styleButton buttonMarginTop">TEST JE KENNIS</a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- THIRD THREAT  -->
+                <div class="threat">
+                    <div class="threatBar" onclick="toggleThreat('phishingInfo')">
+                        <div id="phishingInfoTriangle" class="barTriangle"></div>
+                        <h2>PHISHING</h2>
+                    </div>
+                    <div id="phishingInfo" class="threatInfo">
+
+                        <div class="description">
+                            <p>Phishing is een cyberaanvalsmethode waarbij wordt geprobeerd gebruikersnamen, wachtwoorden of medische gegevens te achterhalen. Dit wordt gedaan met spoofingtechnieken zoals e-mails of berichten door ontvangers aan te moedigen om op links te klikken naar websites met kwaadaardige code of om malware te downloaden of te installeren. Deze technieken worden gebruikt om een gebruiker te verleiden vertrouwelijke informatie vrij te geven. Organisaties in de gezondheidszorg zijn bijzonder kwetsbaar voor phishingaanvallen omdat persoonlijke patiëntgegevens van grote economische waarde zijn. Volgens een onderzoek van Z-cert dat toekomstige cyberaanvallen schat, zal het aantal ransomware-aanvallen toenemen door de steeds nieuwe phishing-aanvallen die zich ontwikkelen.</p>
+                        </div>
+                        <div class="response-impact">
+                            <div class="impact">
+                                <h2>IMPACT</h2>
+                                <p>Phishing within healthcare has several risks such as theft of social security numbers, addresses and phone numbers can be stolen and used for identity theft. Daarnaast zijn hackers vooral geïnteresseerd in inloggegevens: inloggegevens voor verschillende accounts, waaronder bankgegevens, e-mail en sociale media, kunnen worden gecompromitteerd en misbruikt. Als hackers toegang hebben tot onbevoegde accounts, kunnen gestolen online accounts worden gebruikt om fraude of andere misdrijven te plegen in naam van het slachtoffer.<br><br>Een groot nadeel voor grote bedrijven is dat phishing reputatieschade kan veroorzaken. Vaak hebben organisaties die het slachtoffer worden van phishingaanvallen te lijden onder een verlies van vertrouwen bij klanten, opdrachtgevers en partners. 
+        </p>
+                            </div>
+                            <div class="response">
+                                <h2>REACTIE/MAATREGELEN</h2>
+                                <p>De belangrijkste preventieve maatregel tegen een phishingaanval is simpelweg het herkennen dat gebruikers te maken hebben met een phishingbericht. Dit zijn enkele manieren om ze te herkennen:<br><br>
+
+                                    <span class="boldText">Berichtkoppen:</span> Bedrijven en instellingen waar je klant bent of zaken mee doet, zullen op zijn minst je achternaam gebruiken in een e-mail of weten of je een man of een vrouw bent. Als u wordt aangesproken met zeer algemene termen zoals 'Geachte heer/mevrouw' of 'Geachte klant', wees dan voorzichtig.<br><br>
+
+                                    <span class="boldText">Persoonlijke gegevens opvragen:</span> Veel phishingmails vragen je om je persoonlijke gegevens te 'verifiëren', 'bij te werken' of 'aan te vullen' en geven vaak een link om op te klikken. Doe dit nooit impulsief. Uw bank, verzekeringsmaatschappij en overheidsinstellingen zullen nooit op deze manier om persoonlijke informatie vragen. Bel altijd eerst het bedrijf of de instelling om te controleren of ze de e-mail daadwerkelijk hebben verstuurd. Gebruik nooit de contactgegevens die in de e-mail staan, maar zoek ze zelf op.<br><br>
+
+                                    <span class="boldText">Taal en ontwerp:</span> De huidige generatie phishingmails bevat niet langer veel taal- en spelfouten. De gebruikte logo's en foto's worden ook steeds professioneler. Lees en bekijk de e-mail zorgvuldig om te zien of je onregelmatigheden kunt ontdekken. Je kunt de e-mail ook vergelijken met een eerdere e-mail van het bedrijf of de instelling.<br><br>
+
+                                    <span class="boldText">Urgentie of laatste waarschuwingen:</span> Veel phishing e-mails proberen je onder druk te zetten door gebruik te maken van laatste waarschuwingen of dringende berichten. Een voorbeeld van zo'n bericht kan zijn: “Uw hostingpakket loopt af; als u vandaag niet x betaalt, wordt uw website geblokkeerd.” Reageer niet op deze e-mails. Neem in plaats daarvan bij twijfel telefonisch contact op met het hostingbedrijf.<br><br>
+
+                                    <span class="boldText">Linkverkorters:</span> Lange links worden vaak ingekort met T.co, bit.ly en Goo.gl. Hoewel dit handig is, is het voor jou als ontvanger cruciaal om voorzichtig te zijn, omdat het moeilijk is om te bepalen waar deze links daadwerkelijk naartoe leiden.<br><br>
+
+                                    Je kunt <a href="https://www.digitaltrustcenter.nl/informatie-advies/phishing/hoe-herken-ik-een-phishing-e-mail" target=”_blank”>hier</a> meer lezen over hoe je ze kunt herkennen.</p>
+                            </div>
+                        </div>
+                        <div class="caseStudy-button">
+                            <div class="case-study">
+                                <h2>CASESTUDIE</h2>
+                                <h3>Magellan health</h3>
+                                <p>Een ransomware-aanval op Magellan health resulteerde in een rechtszaak over een datalek van 1,43 miljoen dollar. De basis van deze aanval was een phishingaanval die resulteerde in de versleuteling van bestanden en enkele personeelsgegevens. De aanvaller kreeg toegang tot de systemen na een spear phishing e-mail waarbij hij de werknemer voor de gek hield door zich voor te doen als een klant van Magellan Health.  De phishingaanval had gevolgen voor 273 000 personen.<br><br>
+
+                                    De reactie van Magellan Health is wetshandhaving en onderzoek naar de inbreuk. Ook worden er directe stappen gezet naar een meer cyberveilige omgeving in de toekomst.<br><br>
+
+                                    De recente inbreuk betrof gestolen gegevens van huidige werknemers van Magellan Health. Het ging hierbij om gevoelige informatie zoals namen, adressen, ID-nummers van werknemers en W-2- en 1099-informatie, waaronder ID's van belastingbetalers en sofinummers. Daarnaast werd bij de aanval een beperkt aantal gebruikersnamen en wachtwoorden gecompromitteerd. Hoewel er geen pogingen zijn gemeld om deze gegevens te gebruiken, adviseert Magellan Health getroffen personen om waakzaam te blijven voor mogelijke identiteitsdiefstal en misbruik.<br><br>
+
+                                    Bovendien had de inbreuk ook gevolgen voor andere individuen, waarbij mogelijk een reeks gegevens werd blootgelegd, zoals behandelingsgegevens, gegevens van ziektekostenverzekeringsrekeningen, ID's van leden, andere gezondheidsgerelateerde informatie, e-mailadressen, telefoonnummers, fysieke adressen en in sommige gevallen burgerservicenummers. Gegevensdiefstal voor deze groep is echter niet bevestigd.
+        </p>
+                            </div>
+                            <a href="{{ url_for('test') }}" class="styleButton buttonMarginTop">TEST JE KENNIS</a>
+                        </div>
+
+                    </div>
+                </div>
+        
+    </section>
+
+    <script>
+
+        function toggleThreat(infoTag){
+            const infoSection = document.getElementById(infoTag);
+            const barTriangle = document.getElementById(`${infoTag}Triangle`);
+
+
+            if (infoSection.style.maxHeight) {
+                infoSection.style.maxHeight = null;
+            } else {
+                infoSection.style.maxHeight = infoSection.scrollHeight + "px";
+            } 
+
+            barTriangle.classList.toggle('triangleRotate');
+        }
+
+    </script>
+    
+    {% endblock %}
+</body>
+</html>

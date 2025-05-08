@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    {% extends "templateNL.html" %}
+
+    {% block pageBody %} 
+
+    <div class="fade-in pageIntro">
+      <h1>Test Jezelf</h1>
+      <p>Gebruik deze pagina om jezelf te testen op kennis over cyberbeveiliging. De test laat je scenario's zien en opties om op te reageren, of vragen over de juiste werkwijzen. Klik op de knop hieronder om te beginnen! Je ontvangt een digitaal certificaat als je meer dan 90% scoort.</p>
+    </div>
+
+    <div id="testArea">
+
+      <button id="startButton" class="styleButton" onclick="startTest()">Test Starten</button>
+
+    </div>
+
+    <script src="{{ url_for('static',filename='js/testNL.js') }}" defer></script>
+    <script src="{{ url_for('static',filename='js/certificateNL.js') }}" defer></script>
+    <script>
+      var certificateImg = new Image();
+      certificateImg.src = "{{ url_for('static',filename='media/certificate.png') }}";
+      const testScoreUrl = "{{ url_for('processTestScore') }}";
+    </script>
+
+    {% endblock %}
+  </body>
+</html>

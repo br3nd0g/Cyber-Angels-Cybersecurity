@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    {% extends "templateNL.html" %}
+
+    {% block pageBody %} 
+
+    <div class="fade-in pageIntro">
+      <h1>Contact</h1>
+      <p>Als je vragen hebt over de website, suggesties of iets anders, voel je dan vrij om ze op deze pagina in te dienen.</p>
+    </div>
+
+    <div id="formSuccessMessage">
+      <p>Met succes verzonden!</p>
+    </div>
+
+    <form id="contactForm" action="{{ url_for('contactEndpoint')}}" method="post"> 
+
+      <div class="contactFormElement">
+        <label for="email" class="formLabel">E-mailadres</label> 
+        <input name="email" type="email" id="email"> 
+      </div>
+
+      <div class="contactFormElement">
+        <label for="formMessage" class="formLabel">Bericht</label> 
+        <textarea name="message" id="formMessage"></textarea> 
+      </div>
+
+      <button type="submit">Stuuren</button> 
+
+      <input name="lang" id="formLangInput" style="display:none;">
+    </form> 
+
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const lang = urlParams.get('lang');
+      document.getElementById("formLangInput").value = lang;
+
+      const form = {{formSuccess}};
+      if(form === true){document.getElementById("formSuccessMessage").style.display = "flex";}
+    </script>
+
+    {% endblock %}
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    {% extends "template.html" %}
+
+    {% block pageBody %} 
+
+    <div class="fade-in pageIntro" style="margin-bottom: 100px;">
+      <h1>Test Yourself</h1>
+      <p>Use this page to test yourself on cybersecurity knowledge. The test will present you with scenarios and options to respond with, or questions over correct practices. Click the button below to begin! You will receive a digital certificate if you score above 90%. Please note you cannot go back to the previous question.</p>
+    </div>
+
+    <div id="testArea">
+
+      <button id="startButton" class="styleButton" onclick="startTest()">Start Test</button>
+
+    </div>
+
+    <script src="{{ url_for('static',filename='js/test.js') }}" defer></script>
+    <script src="{{ url_for('static',filename='js/certificate.js') }}" defer></script>
+    <script>
+      var certificateImg = new Image();
+      certificateImg.src = "{{ url_for('static',filename='media/certificate.png') }}";
+      const testScoreUrl = "{{ url_for('processTestScore') }}";
+    </script>
+
+    {% endblock %}
+  </body>
+</html>

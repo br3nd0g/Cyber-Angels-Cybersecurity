@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    {% extends "templateNL.html" %}
+
+    {% block pageBody %} 
+
+    <div id="homeContent" class="fade-in">
+      <div id="goal">
+        <h2>ONZE DOELSTELLING</h2>
+        <p>Deze website is ontworpen voor het hoger management van zorgorganisaties om kennis over cyberbeveiliging te leren, te testen en bij te houden. Dit is belangrijk vanwege de aankomende NIS2-wet. Gebruik de leerpagina om informatie te lezen over risico's, maatregelen en praktijkcases. U kunt uw kennis ook testen op de testpagina en uw maatregelen bijhouden op de checklistpagina.</p>
+      </div>
+      <div id="why">
+        <h2>WAAROM CYBERBEVEILIGING</h2>
+        <p>Met de invoering van de NIS2-wet krijgen organisaties in kritieke sectoren meer verplichtingen. Deze verplichtingen zijn vastgelegd in de Europese richtlijn voor netwerk- en informatiebeveiliging (NIS2). De NIS2-richtlijn is bedoeld om een hoger niveau van cyberbeveiliging voor netwerk- en informatiesystemen te bereiken. De richtlijn moet ervoor zorgen dat EU-landen zich beter beschermen tegen bedreigingen die de samenleving of de economie kunnen ontwrichten.</p>
+        <a href="{{ url_for('nis2', lang='nl') }}" class="styleButton buttonMarginTop">UW RECHTEN EN VERANTWOORDELIJKHEDEN</a>
+      </div>
+    </div>
+    
+    {% endblock %}
+  </body>
+</html>
